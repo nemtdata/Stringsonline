@@ -1,0 +1,46 @@
+@import "~src/variables.scss";
+
+.product-main {
+  section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    app-sidemenu {
+      margin: 1em;
+    }
+
+    article {
+      border: 0.1em honeydew;
+
+      figure {
+        width: auto;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .product-details-text {
+    color: aliceblue;
+  }
+
+  .product-info {
+    .price-products {
+      margin-bottom: 1em;
+      padding: 0.5em;
+      border: 1px solid #393939;
+      font-size: 1.2em;
+      border-radius: 4px;
+    }
+
+    button {
+      margin-bottom: 1em;
+      width: 100%;
+      padding: 1em 0.5em;
+      background-color: #d10061;
+      border-radius: 4px;
+      border: none;
+    }
+  }
+}
