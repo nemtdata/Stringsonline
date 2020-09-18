@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~src/variables.scss";
+
+
+body {
+    background-color: #131313;
+    width: 80%;
+    margin: 0 auto 1em auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+button,
+details,
+summary,
+label {
+    color: white;
+}
+button {
+    cursor: pointer;
+}
+a {
+    cursor: pointer;
+}
+p {
+    font-size: 1em;
+}
+label {
+    user-select: none;
+}

@@ -1,0 +1,18 @@
+@import "~src/variables.scss";
+
+
+.banner-inner {
+  height: 4em;
+  background: red;
+  font-size: larger;
+  color: #131313;
+  font-weight: bold;
+  justify-content: center;
+}
+.banner-inner a {
+  font-size: larger;
+  color: $dark-font;
+  font-weight: bold;
+
+  cursor: pointer;
+}
