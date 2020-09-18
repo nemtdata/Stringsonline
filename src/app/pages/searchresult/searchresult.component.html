@@ -1,0 +1,11 @@
+
+
+  <h2 *ngIf="!search">Varen findes ikke</h2>
+  <section class="product-container" >
+<!-- Her  bliver der vis søgresulter,  -->
+    <app-productcard *ngFor="let item of search" [image]="item.image_fullpath" [title]="item.name"
+    [teaser]="item.description_short" [price]="item.price" [stock]="item.stock" [id]="item.id"
+    [url]="['søg', item.id]">
+  </app-productcard>
+  </section>
+

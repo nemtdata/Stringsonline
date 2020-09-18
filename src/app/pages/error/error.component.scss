@@ -1,0 +1,20 @@
+@import "~src/variables.scss";
+
+
+.error-main {
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  gap: 1em;
+  min-height: 59.5vh;
+}
+
+
+
+.tag {
+  margin-top: 1em;
+  display: inline-block;
+  padding: .5em 2em;
+  text-decoration: none;
+  color: $dark-font;
+  background-color: $highlight;
+}

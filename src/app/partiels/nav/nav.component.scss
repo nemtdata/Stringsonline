@@ -1,0 +1,166 @@
+@import "~src/variables.scss";
+
+
+nav {
+  padding: 3em 0;
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  gap: 1em;
+  background-color: $background;
+
+  .contact-icons {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    color: $font-light;
+    justify-content: flex-end;
+
+    span {
+      &~span {
+        margin-left: .5em
+      }
+    }
+
+    p {
+      margin-left: .5em;
+    }
+  }
+
+  figure {
+    position: relative;
+    grid-row: 2;
+
+    img {
+      position: relative;
+      z-index: 1;
+      width: 20rem;
+    }
+
+    figcaption {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-56%);
+      left: 32%;
+      height: 43px;
+      width: calc(84% - -25%);
+      border: 2px solid #FFFFFF;
+      border-radius: 4px;
+      border: 2px solid $font-light;
+
+      ul {
+        position: absolute;
+        right: 0;
+        display: flex;
+        top: 20%;
+        transform: translateY(-50%);
+
+        li {
+          list-style: none;
+
+          a {
+            padding: 1em;
+            margin: 0 .5em;
+            text-decoration: none;
+            color: $font-light;
+          }
+
+          .login-button {
+            background-color: $highlight;
+            color: $dark-font;
+            padding: .2em 2em;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .nav {
+    margin-top: 2.9em;
+    justify-self: flex-end;
+
+    .form {
+      columns: 1 / 2;
+      display: flex;
+
+      input {
+        border-radius: 4px;
+        padding: .8em;
+        width: 100%;
+        border: 1px solid $border-color;
+        background-color: $input-fill;
+
+        &::placeholder {
+          color: $highlight;
+        }
+      }
+
+      button {
+        margin: .12em;
+        border-radius: 4px;
+        width: 60px;
+        border: none;
+        background-color: $highlight;
+
+        span {
+          color: $input-fill;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+
+
+  nav {
+    grid-template-columns: 1fr 1fr ;
+
+
+    figure {
+      img {
+        position: relative;
+        z-index: 1;
+        top: -7em;
+        max-width: 20rem;
+      }
+      figcaption {
+        width: calc(93% - -37%);
+        margin-left: -6em;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+
+  /* Here are some changes*/
+  nav {
+    grid-template-columns: 1fr ;
+
+    .contact-icons {
+      grid-column: 1;
+      justify-content: center;
+
+      p {
+        margin-left: .5em;
+      }
+    }
+
+    figure {
+      position: relative;
+      grid-row: 2;
+      font-size: 1px;
+
+      img {
+        position: absolute;
+        top: -23px;
+        width: 10rem;
+        left: -30px;
+      }
+    }
+  }
+}

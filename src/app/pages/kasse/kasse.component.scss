@@ -1,0 +1,183 @@
+@import "~src/variables.scss";
+
+.kasse-main {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  gap: 1em;
+  margin: 1em auto;
+
+  .form-section {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1em 2em;
+
+
+    input {
+      display: block;
+      padding: 0.5em;
+      background-color: $input-fill;
+      border: 1px solid $border-color;
+      color: $highlight;
+      border-radius: 4px;
+      margin: 1em auto;
+      height: 2em;
+      width: 200px;
+
+
+      &::placeholder {
+        color: $highlight;
+        opacity: .5;
+      }
+    }
+
+    label {
+      margin-left: 1em;
+      color: $highlight;
+      cursor: pointer;
+    }
+
+    .otherShippingaddress {
+      display: block;
+      padding-top: 1em;
+    }
+
+    .phoneNumber {
+      position: relative;
+
+      P {
+        position: absolute;
+        z-index: -1;
+        padding: 1em;
+        top: 30px;
+        border-radius: 0 0 4px 4px;
+        background-color: #113B39;
+        color: $highlight;
+      }
+    }
+
+    .pay-section {
+      display: block;
+      background-color: $input-fill;
+      margin-top: 1em;
+      border-radius: 4px;
+
+      .pay-wrapper {
+        justify-content: center;
+        cursor: pointer;
+        margin: 1em auto;
+        padding: 1em;
+
+        .payment-input {
+          padding: 1em;
+        }
+
+        .payment-container {
+          background-color: $input-fill;
+          margin-top: 1em;
+          border-radius: 4px;
+          justify-content: center;
+          cursor: pointer
+        }
+      }
+    }
+
+    button {
+      margin-top: 1em;
+      grid-column: 3;
+      width: 100%;
+      padding: 1em;
+      background-color: $highlight;
+      color: $dark-font;
+      border-radius: 4px;
+      border: none;
+      font-weight: bold;
+
+      &:disabled {
+        opacity: .5;
+      }
+    }
+
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+
+  .kasse-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin: 1em auto;
+
+    .form-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+
+
+
+      input {
+        display: block;
+        padding: 0.5em;
+        background-color: $input-fill;
+        border: 1px solid $border-color;
+        color: $highlight;
+        border-radius: 4px;
+        margin: 1em auto;
+        height: 2em;
+        width: 200px;
+
+
+        &::placeholder {
+          color: $highlight;
+          opacity: .5;
+        }
+      }
+
+      label {
+        margin-left: 1em;
+        color: $highlight;
+        cursor: pointer;
+      }
+
+
+
+      .pay-section {
+        display: block;
+        background-color: $input-fill;
+        margin-top: 1em;
+        border-radius: 4px;
+
+        .pay-wrapper {
+          justify-content: center;
+          text-align: center;
+        }
+      }
+
+
+
+    }
+  }
+  .faktura {
+    margin: 10em auto;
+
+  }
+
+
+}
+@media only screen and (max-width: 1024px) {
+
+
+  .kasse-main {
+    grid-template-columns: 1fr 1fr;
+    margin: 0em auto;
+    .form-section {
+      grid-template-columns: 1fr 1fr 1fr;
+      line-break: anywhere;
+      input {
+
+        width: 160px;
+      }
+    }
+  }
+}

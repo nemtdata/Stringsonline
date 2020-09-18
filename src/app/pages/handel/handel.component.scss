@@ -1,0 +1,12 @@
+@import "~src/variables.scss";
+
+
+.terms-container {
+  h2 {
+      color: $highlight;
+  }
+  p {
+    color: aliceblue;
+      margin: .5em 0 1em 0;
+  }
+}

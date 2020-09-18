@@ -1,0 +1,15 @@
+<aside class="left-menu" *ngIf="products ">
+  <details *ngFor="let product of products">
+      <summary>{{product.title}}</summary>
+
+      <a *ngFor="let item of product.subgroups"
+      routerLink="/produkter/{{product.title}}/{{item.title}}/{{item.id}}/">{{item.title}}</a>
+  </details>
+  <details >
+    <summary>Brands</summary>
+    <a *ngFor="let item of brands"
+    routerLink="/brands/{{brands.title}}/{{item.title}}/{{item.id}}/">{{item.title}}</a>
+</details>
+</aside>
+
+

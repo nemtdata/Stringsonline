@@ -1,0 +1,26 @@
+@import "~src/variables.scss";
+
+.breadCrumb-container {
+  display: flex;
+  border-bottom: 1px solid $border-color;
+  padding: 1em 0;
+  border-top: 1px solid $border-color;
+
+  a {
+    color: $highlight;
+    text-decoration: none;
+  }
+
+  span {
+    color: $highlight;
+  }
+
+  .separation {
+    color: white;
+    margin: 0 .3em;
+  }
+
+  .breadCrumb-link-container {
+    display: flex;
+  }
+}

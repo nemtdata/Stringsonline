@@ -1,0 +1,73 @@
+<header>
+  <app-breadcrumb [breadcrumbs]="[{place: 'kasse', url: 'Betaling'}]"></app-breadcrumb>
+</header>
+
+<main class="kasse-main" >
+
+    <app-sidemenu></app-sidemenu>
+    <section class="kasse-section" >
+      <h1>Kasse</h1>
+      <form [formGroup]="order" class="form-section"  (ngSubmit)="onSubmit()">
+        <section  >
+          <h3 >Falturerings- & leveringsadresse</h3>
+          <input type="text" formControlName="firstname" placeholder="Fornavn">
+          <input type="text" formControlName="lastname"  placeholder="Efternavn">
+          <input type="text" formControlName="address"   placeholder="Gade/Vej og husnummer">
+          <div >
+            <input type="number" formControlName="zipcode" placeholder="Postnr">
+            <input type="text" formControlName="city"  placeholder="By">
+          </div>
+          <div >
+            <input id="adresse-checkbox" type="checkbox">
+            <label for="dresse-checkbox">Anden leveringsadresse</label>
+          </div>
+        </section>
+        <section>
+          <h3>Email & telefon</h3>
+          <input type="email" formControlName="email" placeholder="Emailadresse">
+          <div class="phoneNumber">
+            <input type="number" formControlName="number" placeholder="Telefonnummer">
+            <p class="info">
+              Med dit telefonnummer kan vi kontakte dig i tilfælde af spørgsmål eller
+              problemer. Hvis du
+              oplyser dit mobilnummer, kan vi også sende dig en forsendelsesbekræftelse via SMS.
+            </p>
+          </div>
+        </section>
+        <section class="faktura">
+          <h3>BetalingsMetode</h3>
+          <section class="pay-section">
+            <div class="pay-wrapper">
+          <div class="pay-input" id="checkBank">
+            <input type="radio" id="bank">
+            <label for="bank">Bankoverførsel</label>
+          </div>
+          <div #bankPayment class="payment-number">
+            <input type="text" placeholder="REG.NR">
+            <input type="text" placeholder="KONTONR">
+          </div>
+          <div class="payment-container" id="checkCard">
+            <input type="radio" id="card">
+            <label for="card">Kreditkort (MasterCard, VISA)</label>
+          </div>
+          <div >
+            <input type="text" placeholder="Kortnummer">
+            <div>
+              <input type="number" placeholder="Måned">
+              <input type="number" placeholder="år">
+            </div>
+            <input type="text" placeholder="CVV">
+            <input type="text" placeholder="Kort indhaver">
+          </div>
+        </div>
+          <button onclick="onSubmit()" class="button">BETAL</button>
+        </section>
+      </section>
+
+      </form>
+    </section>
+  </main>
+
+
+
+

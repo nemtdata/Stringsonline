@@ -1,0 +1,44 @@
+@import "~src/variables.scss";
+
+
+.left-menu {
+  border: 1px solid $highlight;
+  background-color: $input-fill;
+  margin-right: 1em;
+  details {
+    margin: 1em 0;
+    user-select: none;
+    cursor: pointer;
+
+    &[open]>summary {
+      color: white;
+    }
+      summary {
+        color: $highlight;
+        user-select: none;
+        padding-left: 1em;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+      }
+
+      a {
+        display: block;
+        padding: .2em 2em;
+        text-decoration: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .left-menu {
+      margin-right: 0;
+      }
+  }
+  @media only screen and (max-width: 1024px) {
+
+    .left-menu {
+      width: fit-content;
+      padding: 0.1em;
+      }
+  }

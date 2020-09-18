@@ -1,0 +1,34 @@
+<header class="product-header">
+  <app-breadcrumb *ngIf="product"
+      [breadcrumbs]="[{place: type, url: '/' },  {place: product.name, url: '/produkt/'+ type + '/' + typeTwo + '/' + productTypeId + '/' + productId}]">
+  </app-breadcrumb>
+</header>
+<main class="product-main">
+  <section >
+    <app-sidemenu></app-sidemenu>
+      <article class="product-details-images" *ngIf="product">
+        <figure>
+          <img src="{{product.image.fullpath}}" alt="{{product.name}} image">
+      </figure>
+      <figure *ngFor="let item of product.gallery">
+          <img src="{{item.fullpath}}" alt="{{product.name}} image">
+      </figure>
+    </article>
+      <article class="product-details-text" *ngIf="product">
+          <h2>{{product.name}}</h2>
+          <p>{{product.description_long}}</p>
+      </article>
+
+
+    <article class="product-info" *ngIf="product" >
+      <img class="product-brand" src="{{product.brand_image}}">
+   <p class="product-price">Pris: DKK {{product.price}} </p>
+    <button (click)="cart.addToCart(0)">Læg i kurv</button>
+    <p>{{product.rating}} Gemensnit rating</p>
+    <p>{{product.stock}}+ på lager</p>
+
+  </article>
+</section>
+</main>
+
+

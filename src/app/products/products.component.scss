@@ -1,0 +1,52 @@
+@import "~src/variables.scss";
+
+
+
+.products-main {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  color: $font-light;
+
+}
+
+.products-container {
+  margin-left: 3rem;
+
+}
+.filter {
+  position: absolute;
+    right: 10%;
+  select {
+      border: 1px solid  $border-color;
+      background-color: $highlight;
+      color: $dark-font;
+      padding: .5em 1em;
+      margin-left: 1em;
+      font-weight: 500;
+
+      font-size: 1em;
+      option {
+      font-weight: 500;
+      }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .products-main {
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
+
+  .products-container {
+    margin-left: 3rem;
+
+  }
+
+
+
+
+
+
+}

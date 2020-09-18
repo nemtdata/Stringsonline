@@ -1,0 +1,17 @@
+<header>
+  <app-breadcrumb [breadcrumbs]="[{place: 'login', url: 'login'}]"></app-breadcrumb>
+</header>
+<main>
+  <section class="login-field">
+  <h2> LOGIN</h2>
+  <p> Indtast brugernavn og adgangskode for logge på</p>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+    <label class="username-label" for="username">Brugernavn</label>
+    <input type="text" name="username" id="username" formControlName="username" placeholder="John@doe.com" autocomplete="off"/>
+    <label class="password-label" for="password">Kodeord</label>
+    <input type="password" name="password" id="password" formControlName="password" placeholder="*******"  autocomplete="off"/>
+    <button class="button" type="login">Login</button>
+  </form>
+
+</section>
+</main>
